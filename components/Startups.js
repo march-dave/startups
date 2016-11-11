@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import {
   Text,
   View,
+  TouchableOpacity,
   ListView
 } from 'react-native'
 
@@ -22,6 +23,18 @@ class Startups extends Component {
     this.state = {
       startups: dataSource.cloneWithRows(startups)
     }
+  }
+
+  renderRow = (startup, sId, rId) => {
+    return (
+      <TouchableOpacity onPress={this.selectStartup.bind(this, startup)}>
+        <Text>{startup.name}</Text>
+      </TouchableOpacity>
+    )
+  }
+
+  selectStartup = (startup) => {
+    console.log('selectStartup' + JSON.stringify(startup));
   }
 
   renderRow(startup, sId, rId) {
