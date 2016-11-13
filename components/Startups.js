@@ -13,8 +13,9 @@ class Startups extends Component {
     const startups = [
       {id:0, name:'uber', industry: 'transportation' },
       {id:1, name:'air bnb', industry: 'hospitality' },
-      {id:3, name:'instagram', industry: 'social' }
-      {id:4, name:'facebook', industry: 'SNS' }
+      {id:3, name:'instagram', industry: 'social' },
+      {id:4, name:'facebook', industry: 'SNS' },
+      {id:5, name:'twitter', industry: 'social messgnger' }
     ]
 
     const dataSource = new ListView.DataSource({
