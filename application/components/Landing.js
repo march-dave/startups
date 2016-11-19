@@ -7,6 +7,8 @@ import {
   View
 } from 'react-native';
 
+import NavigationBar from 'react-native-navbar';
+
 import Colors from '../styles/colors';
 import { landingStyles, globals } from '../styles';
 
