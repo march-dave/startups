@@ -1,3 +1,4 @@
+/* application/components/Landing.js */
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import React, { Component } from 'react';
 import {
@@ -6,8 +7,6 @@ import {
   Image,
   View
 } from 'react-native';
-
-import NavigationBar from 'react-native-navbar';
 
 import Colors from '../styles/colors';
 import { landingStyles, globals } from '../styles';
