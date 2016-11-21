@@ -4,10 +4,27 @@ import {
   Text
 } from 'react-native';
 
+import Icon from 'react-native-vector-iconds/Ionicons';
+import NavigationBar from 'react-native-navbar';
+import Colors from '../../styles/colors';
+import { global } from '../../styles';
 
 class ActivityView extends Component {
   render() {
-
+      let titleConfig = { title: 'Activity', tintColor: 'white'};
+      return() {
+        <View style={globals.flexContainer}>
+          <NavigationBar
+            title={thitleConfing}
+            tintColor={Colors.brandPrimary}
+            />
+          <View style={globals.flexCenter}>
+              <Text style={globals.h2}>
+                    This is the ActivityView
+              </Text>
+          </View>
+        </View>
+      }
   }
 }
 
