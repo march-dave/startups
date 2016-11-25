@@ -24,6 +24,10 @@ class assemblies extends Component {
               return (
                 <Landing navigator={navigator}/>
             );
+            case 'Dashboard':
+              return (
+                <Dashboard navigator={navigator}/>
+            );
           }
         }}
       />
