@@ -11,8 +11,10 @@ import {
 } from 'react-native';
 
 import Landing from './application/components/Landing';
+import Dashboard from './application/components/Dashboard';
+import { globals } from './application/styles';
 
-class assemblies extends Component {
+class startups extends Component {
   render() {
     return (
       <Navigator
