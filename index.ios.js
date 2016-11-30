@@ -1,3 +1,4 @@
+import NavigationBar from 'react-native-navbar'
 /**
  * Sample React Native App
  * https://github.com/facebook/react-native
@@ -7,10 +8,13 @@
 import React, { Component } from 'react';
 import {
   AppRegistry,
-  Navigator
-} from 'react-native';
-
-import NavigationBar from 'react-native-navbar'
+  StyleSheet,
+  Text,
+  View,
+  MapView,
+  Picker,
+  DatePickerIOS,
+} from 'react-native'
 
 // import Landing from './application/components/Landing';
 // import Dashboard from './application/components/Dashboard';
