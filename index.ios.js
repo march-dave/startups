@@ -34,13 +34,24 @@ class startups extends Component {
           Press Cmd+R to reload,{'\n'}
           Cmd+D or shake for dev menu
         </Text>
-       <NavigationBar
+
+        <NavigationBar
          title={{ title: 'Title', tintColor: 'black', }}
          leftButton={{ title: 'Back', }}
          rightButton={{ title: 'Forward', }}
          style={{ backgroundColor: "white", }}
          statusBar={{ tintColor: "white", }}
        />
+
+       <MapView
+            style={{
+              height: 200,
+              width: 300,
+            }}
+            onRegionChange={() => {}}
+            onRegionChangeComplete={() => {}}
+            showsUserLocation={true}
+          />
 
       </View>
     );
