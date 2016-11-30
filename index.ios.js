@@ -1,4 +1,5 @@
 import NavigationBar from 'react-native-navbar'
+import Lightbox from 'react-native-lightbox'
 /**
  * Sample React Native App
  * https://github.com/facebook/react-native
@@ -14,6 +15,7 @@ import {
   MapView,
   Picker,
   DatePickerIOS,
+  Image,
 } from 'react-native'
 
 // import Landing from './application/components/Landing';
@@ -52,6 +54,17 @@ class startups extends Component {
             onRegionChangeComplete={() => {}}
             showsUserLocation={true}
           />
+
+
+           <Lightbox navigator={this.props.navigator}>
+             <Image
+               style={{
+                 height: 200,
+                 width: 300,
+               }}
+               source={{uri:'https://unsplash.it/600/400/?random'}}
+             />
+           </Lightbox>
 
       </View>
     );
