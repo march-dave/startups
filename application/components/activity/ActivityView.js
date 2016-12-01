@@ -1,4 +1,5 @@
 /* application/components/activity/ActivityView.js */
+
 import React, { Component } from 'react';
 import {
   View,
