@@ -27,9 +27,43 @@ class MessagesView extends Component{
   }
 
   _renderRow(conversation){
+    let userIDs = [ conversation.user1Id, conversation.user2Id];
+    let otherUserID = find(userIDs, (id) => !isEqual(id, currentUser.id));
+    let user = find(FakeUsers, ({ id }) => isEqual(id, otherUserID));
     return (
-      <Text>{conversation.lastMessageText}</Text>
+      <TouchableOpacity style={globals.flexContainer}>
+        <View style={globals.flexRow}>
+          <Image
+            style={globals.avatar}
+            source={{uri: user.avatar}}
+          />
+          <View style={globals.flex}>
+            <View style={globals.textContainer}>
+              <Text style={styles.h5}>
+                {user.firstName} {user.lastName}
+              </Text>
+              <Text style={styles.h6}>
+                {moment(conversation.lastMessageDate).fromNow()}
+              </Text>
+            </View>
+            <Text style={styles.h4}>
+              {conversation.lastMessageText.substring(0, 40)}...
+            </Text>
+          </View>
+          <View style={styles.arrowContainer}>
+            <Icon
+              size={30}
+              name="ios-arrow-forward"
+              color={Colors.bodyTextLight}
+            />
+          </View>
+        </View>
+        <View style={styles.divider}/>
+      </TouchableOpacity>
     )
+    // return (
+    //   <Text>{conversation.lastMessageText}</Text>
+    // )
   }
   dataSource(){
     return (

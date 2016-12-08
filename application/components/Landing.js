@@ -1,5 +1,6 @@
 /* application/components/Landing.js */
-import Icon from 'react-native-vector-icons/MaterialIcons';
+// import Icon from 'react-native-vector-icons/MaterialIcons';
+import Icon from 'react-native-vector-icons/Ionicons';
 import React, { Component } from 'react';
 import {
   Text,
