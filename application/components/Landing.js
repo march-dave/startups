@@ -15,7 +15,7 @@ import { landingStyles, globals } from '../styles';
 // const BackgroundImage = 'https://s3-us-west-2.amazonaws.com/assembliesapp/welcome%402x.png';
 const BackgroundImage = 'https://res.cloudinary.com/drrwovgv6/image/upload/v1483894228/BGimage_sw81qa.png';
 // const Logo = 'https://s3-us-west-2.amazonaws.com/assembliesapp/logo.png';
-const Logo = 'https://res.cloudinary.com/drrwovgv6/image/upload/v1483887573/logo_ppak3x.png';
+const Logo = 'https://res.cloudinary.com/drrwovgv6/image/upload/v1483895904/icon_r5rwee.png';
 const styles = landingStyles;
 
 class Landing extends Component{

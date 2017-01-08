@@ -1,7 +1,8 @@
 /* application/components/activity/ActivityView.js */
 import React, { Component } from 'react';
 
-import superagent from 'superagent';
+import ProfileView from '../profile/ProfileView';
+// import ProfileDetail from '../profile/ProfileDetail';
 
 import {
   ScrollView,
@@ -17,7 +18,7 @@ import NavigationBar from 'react-native-navbar';
 import Colors from '../../styles/colors';
 import { globals, activityStyles } from '../../styles';
 
-// Data List retrive
+// Data List retrieve
 import { upcomingEvent, FakeNotifications } from '../../fixtures';
 
 const styles = activityStyles;
@@ -38,18 +39,6 @@ const ActivityMap = ({ event }) => {
       subtitle: '1234 Foo Drive'
     }
   ];
-
-  // const markers = this.state.venues.map(
-  //      (venue, i) => {
-  //          const marker = {
-  //              position: {
-  //                  lat: venue.location.lat,
-  //                  lng: venue.location.lng
-  //              }
-  //          }
-  //
-  //    return <Marker key={i} {...marker} />
-  //  })
 
   return (
     <MapView
@@ -88,44 +77,7 @@ const Notification = ({ notification }) => (
 
 class Activity extends Component{
 
-  constructor(props) {
-     super(props);
-
-     this.state = {
-       venues: []
-     }
-   }
-
-  componentDidMount() {
-    const url = 'https://api.foursquare.com/v2/venues/search?ll=40.7575285,-73.9884469&oauth_token=0DWMXELULH1PCZUJVTPBZ5ISSSD30DIXN2WZGRNEU0KZW23G&v=20161209'
-    superagent
-    .get(url)
-    .query(null)
-    .set('Accept', 'text/json')
-    .end((err, res) => {
-      const venues = res.body.response.venues;
-      console.log('venues', venues);
-
-      this.setState({
-        venues: venues
-      })
-    })
-  }
-
   render() {
-
-    const markers = this.state.venues.map(
-         (venue, i) => {
-             const marker = {
-                 position: {
-                     lat: venue.location.lat,
-                     lng: venue.location.lng
-                 }
-             }
-
-      //  return <Marker key={i} {...marker} />
-     })
-
 
     let titleConfig = { title: 'Activity', tintColor: 'white' };
     return (
@@ -138,10 +90,12 @@ class Activity extends Component{
           <TouchableOpacity>
             <View style={[globals.flexRow, globals.mb1]}>
               <Text style={styles.h4}>
-                Public Location:
+                Public Location
               </Text>
               <Text style={globals.primaryText}>
-                { upcomingEvent.name }
+                {
+                  // upcomingEvent.name
+                }
               </Text>
             </View>
             <Text style={[styles.dateText, globals.mb1]}>
@@ -150,12 +104,18 @@ class Activity extends Component{
               }
             </Text>
           </TouchableOpacity>
+
           <ActivityMap event={upcomingEvent}/>
+
+
+
           <View>
             <Text style={[styles.h4, globals.mv1]}>
-              List of public w
+
             </Text>
             <View style={globals.divider}/>
+
+
             <View style={globals.flex}>
               {FakeNotifications.map((n, idx) => (
                 <View key={idx} style={globals.flex}>
@@ -164,7 +124,11 @@ class Activity extends Component{
               ))}
               <View style={styles.emptySpace} />
             </View>
+
+            <ProfileView />
+            
           </View>
+
         </ScrollView>
       </View>
     );

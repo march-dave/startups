@@ -1,4 +1,4 @@
-/* application/components/profile/ProfileView.js */
+/* application/components/profile/ProfileDetail.js */
 import React, { Component } from 'react';
 import {
   View,
@@ -29,14 +29,14 @@ const ListItem = require('../ListItem');
 
 // Initialize Firebase
 const firebaseConfig = {
-  apiKey: "AIzaSyDEAv7YESU7TxMmUyNXzGk2ONUqYfPEwEE",
+  apiKey: "",
   authDomain: "firereactbasenative.firebaseapp.com",
   databaseURL: "https://igottago-71c7d.firebaseio.com/",
   storageBucket: "",
 };
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 
-class ProfileView extends Component {
+class ProfileDetail extends Component {
 
   constructor(props) {
     super(props);
@@ -154,4 +154,4 @@ const stylesGo = StyleSheet.create({
   },
 });
 
-export default ProfileView;
+export default ProfileDetail;

@@ -36,12 +36,10 @@ export const Technologies = [
 ];
 
 export const FakeUsers = [
-  { id: 0, firstName: 'Paul', lastName: 'Graham', avatar: 'https://pbs.twimg.com/profile_images/1824002576/pg-railsconf_400x400.jpg' },
-  { id: 1, firstName: 'Dan', lastName: 'Abramov', avatar: 'https://pbs.twimg.com/profile_images/553711083064541184/9VsY9i09.jpeg' },
-  { id: 2, firstName: 'Marc', lastName: 'Andreessen', avatar: 'https://pbs.twimg.com/profile_images/649108987128868864/rWnwMe55.jpg'},
-  { id: 3, firstName: 'Nick', lastName: 'Brown', avatar: 'https://pbs.twimg.com/profile_images/652242629556609024/nRgVcSMq.jpg'},
-  { id: 4, firstName: 'Brent', lastName: 'Vatne', avatar: 'https://codecore.ca/assets/team/brent-5b7ed4ae6cedceb4e5a7df9ba1fada5e.jpg'},
-  { id: 5, firstName: 'Kanye', lastName: 'West', avatar: 'https://pbs.twimg.com/profile_images/585565077207678977/N_eNSBXi.jpg'},
+  { id: 0, firstName: 'Dave', lastName: 'Lee', avatar: 'https://avatars3.githubusercontent.com/u/7968378?v=3&u=3a5aa3780108d707a49b18c4d77e90b8777f4bd9&s=400' },
+  { id: 1, firstName: 'Vincent', lastName: 'Occhiogrosso', avatar: 'https://avatars2.githubusercontent.com/u/16623151?v=3&s=400' },
+  { id: 2, firstName: 'Echo', lastName: 'Liang', avatar: 'https://res.cloudinary.com/drrwovgv6/image/upload/v1483905399/2017-01-08_yxg6ni.jpg'},
+  { id: 3, firstName: 'Jay', lastName: 'Hu', avatar: 'https://avatars3.githubusercontent.com/u/1398690?v=3&s=400'}
 ];
 
 export const FakeMessages = [
@@ -124,11 +122,11 @@ export const FakeConversations = FakeUsers.map((user, idx) => ({
 }));
 
 export const FakeNotifications = [
-  {createdAt: randomDate().valueOf(), message: 'new message from Kanye', type: 'Message', seen: false,},
-  {createdAt: randomDate().valueOf(), message: 'comment in React Native NYC', type: 'Event', seen: false,},
-  {createdAt: randomDate().valueOf(), message: 'new members in React Native NYC', type: 'Group', seen: false,},
-  {createdAt: randomDate().valueOf(), message: 'new message from Nick', type: 'Message', seen: false,},
-  {createdAt: randomDate().valueOf(), message: 'new event in JavaScript', type: 'Event', seen: false,},
+  {createdAt: randomDate().valueOf(), message: 'Report from Kanye', type: 'Starbucks', seen: false,},
+  {createdAt: randomDate().valueOf(), message: 'information', type: 'McDonalds', seen: false,},
+  {createdAt: randomDate().valueOf(), message: 'information', type: 'Wendys', seen: false,},
+  {createdAt: randomDate().valueOf(), message: 'information from Nick', type: 'High Line Bathroom at Gansevoort St', seen: true,},
+  {createdAt: randomDate().valueOf(), message: 'information', type: 'Home Depot', seen: false,},
 ]
 
 
