@@ -16,6 +16,8 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import NavigationBar from 'react-native-navbar';
 import Colors from '../../styles/colors';
 import { globals, activityStyles } from '../../styles';
+
+// Data List retrive
 import { upcomingEvent, FakeNotifications } from '../../fixtures';
 
 const styles = activityStyles;
@@ -27,14 +29,33 @@ const ActivityMap = ({ event }) => {
     latitudeDelta: 0.01,
     longitudeDelta: 0.01,
   };
+
+  let markers = [
+    {
+      latitude: -27.4679542,
+      longitude: 153.0063908,
+      title: 'Foo Place',
+      subtitle: '1234 Foo Drive'
+    }
+  ];
+
+  // const markers = this.state.venues.map(
+  //      (venue, i) => {
+  //          const marker = {
+  //              position: {
+  //                  lat: venue.location.lat,
+  //                  lng: venue.location.lng
+  //              }
+  //          }
+  //
+  //    return <Marker key={i} {...marker} />
+  //  })
+
   return (
     <MapView
       style={globals.map}
       region={mapRegion}
-      annotations={[{
-        latitude: mapRegion.latitude,
-        longitude: mapRegion.longitude
-      }]}
+      annotations={markers}
     />
   )
 };
@@ -68,12 +89,12 @@ const Notification = ({ notification }) => (
 class Activity extends Component{
 
   constructor(props) {
-    super(props);
+     super(props);
 
-    this.state = {
-      value: []
-    }
-  }
+     this.state = {
+       venues: []
+     }
+   }
 
   componentDidMount() {
     const url = 'https://api.foursquare.com/v2/venues/search?ll=40.7575285,-73.9884469&oauth_token=0DWMXELULH1PCZUJVTPBZ5ISSSD30DIXN2WZGRNEU0KZW23G&v=20161209'
@@ -92,6 +113,20 @@ class Activity extends Component{
   }
 
   render() {
+
+    const markers = this.state.venues.map(
+         (venue, i) => {
+             const marker = {
+                 position: {
+                     lat: venue.location.lat,
+                     lng: venue.location.lng
+                 }
+             }
+
+      //  return <Marker key={i} {...marker} />
+     })
+
+
     let titleConfig = { title: 'Activity', tintColor: 'white' };
     return (
       <View style={globals.flexContainer}>

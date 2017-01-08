@@ -140,7 +140,7 @@ export const upcomingEvent = {
   going: [],
   location : {
     "lat": -27.4679542,
-    "lng": 153.0063908,
+      "lng": 153.0063908,
     "city": {
       "long_name": "Milton",
       "short_name": "Milton",
