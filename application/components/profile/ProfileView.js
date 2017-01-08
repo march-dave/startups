@@ -29,7 +29,7 @@ const ListItem = require('../ListItem');
 
 // Initialize Firebase
 const firebaseConfig = {
-  apiKey: "AIzaSyDEAv7YESU7TxMmUyNXzGk2ONUqYfPEwEE",
+  apiKey: "",
   authDomain: "firereactbasenative.firebaseapp.com",
   databaseURL: "https://igottago-71c7d.firebaseio.com/",
   storageBucket: "",
