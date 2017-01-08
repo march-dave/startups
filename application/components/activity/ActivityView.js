@@ -75,20 +75,22 @@ class Activity extends Component{
           <TouchableOpacity>
             <View style={[globals.flexRow, globals.mb1]}>
               <Text style={styles.h4}>
-                Next Assembly:
+                Public Location:
               </Text>
               <Text style={globals.primaryText}>
                 { upcomingEvent.name }
               </Text>
             </View>
             <Text style={[styles.dateText, globals.mb1]}>
-              {moment(new Date(upcomingEvent.start)).format('dddd MMM Do, h:mm a')}
+              {
+                // moment(new Date(upcomingEvent.start)).format('dddd MMM Do, h:mm a')
+              }
             </Text>
           </TouchableOpacity>
           <ActivityMap event={upcomingEvent}/>
           <View>
             <Text style={[styles.h4, globals.mv1]}>
-              Notifications
+              List of public w
             </Text>
             <View style={globals.divider}/>
             <View style={globals.flex}>

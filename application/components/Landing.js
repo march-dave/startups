@@ -13,6 +13,7 @@ import Colors from '../styles/colors';
 import { landingStyles, globals } from '../styles';
 
 const BackgroundImage = 'https://s3-us-west-2.amazonaws.com/assembliesapp/welcome%402x.png';
+// const BackgroundImage = 'https://www.clipartkid.com/images/34/restroom-clip-art-Z0Qn4f-clipart.png';
 const Logo = 'https://s3-us-west-2.amazonaws.com/assembliesapp/logo.png';
 const styles = landingStyles;
 
@@ -39,10 +40,10 @@ class Landing extends Component{
             source={{ uri: Logo }}
           />
           <Text style={[globals.lightText, globals.h2, globals.mb2]}>
-            assemblies
+            iGottaGo
           </Text>
           <Text style={[globals.lightText, globals.h4]}>
-            Where Developers Connect
+            Where Public List
           </Text>
         </View>
         <TouchableOpacity
