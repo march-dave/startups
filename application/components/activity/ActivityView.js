@@ -125,8 +125,8 @@ class Activity extends Component{
               <View style={styles.emptySpace} />
             </View>
 
-            <ProfileView />
-            
+          
+
           </View>
 
         </ScrollView>
