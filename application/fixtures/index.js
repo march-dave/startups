@@ -11,7 +11,8 @@ export const SolidColors = [
   'green',
 ];
 
-export const BackgroundImage = 'https://s3-us-west-2.amazonaws.com/assembliesapp/welcome%402x.png';
+// export const BackgroundImage = 'https://s3-us-west-2.amazonaws.com/assembliesapp/welcome%402x.png';
+const BackgroundImage = 'https://res.cloudinary.com/drrwovgv6/image/upload/v1483894228/BGimage_sw81qa.png';
 
 export const Headers = {
   'Content-Type': 'application/json'
